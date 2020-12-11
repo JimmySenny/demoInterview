@@ -29,3 +29,13 @@ void tst_pfsum( void ){
     pfsum( 3, &sum );
     printf( "sum=[%lf]\n", sum );
 }
+
+void tst_addBinary(){
+    char s1[] = "1111";
+    char s2[] = "1111";
+
+    printf( "addBinary[%s]", addBinary(s1,s2));
+
+    return;
+}
+

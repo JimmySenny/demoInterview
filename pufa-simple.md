@@ -526,6 +526,8 @@
 - `1 <= values <= 10000`
 - `最多会对 appendTail、deleteHead 进行 10000 次调用`
 
+![09.gif](https://pic.leetcode-cn.com/966aebd484002e620d88676847273a061ab9ab6d863ab5079ab347a643461e24-09.gif)
+
 #### [超过经理收入的员工](https://leetcode-cn.com/problems/employees-earning-more-than-their-managers/)
 
 难度简单334收藏分享切换为英文接收动态反馈
@@ -554,6 +556,26 @@ SQL架构
 | Joe      |
 +----------+
 ```
+
+```
+SELECT  t1.Name  as Employee
+FROM Employee t1 
+INNER JOIN Employee t2
+ON t1.ManagerId is not NULL 
+AND t1.ManagerId = t2.Id
+AND t1.Salary > t2.Salary
+
+SELECT t1.Name as Employee
+FROM Employee t1, Employee t2
+WHERE t1.ManagerId = t2.Id 
+ AND t1.Salary > t2.Salary
+
+
+
+
+```
+
+
 
 #### [组合两个表](https://leetcode-cn.com/problems/combine-two-tables/)
 
@@ -653,6 +675,8 @@ FirstName, LastName, City, State
 - 链表中节点的数目范围是 `[0, 104]`
 - `-105 <= Node.val <= 105`
 - `pos` 为 `-1` 或者链表中的一个 **有效索引** 。
+
+
 
 #### [剑指 Offer 57. 和为s的两个数字](https://leetcode-cn.com/problems/he-wei-sde-liang-ge-shu-zi-lcof/)
 

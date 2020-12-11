@@ -6,7 +6,8 @@ int main(int argc, char* argv[]){
 
     /* pufa */
     //tst_pfre( );
-    tst_pfsum( );
+    //tst_pfsum( );
+    tst_addBinary( );
 
     return 0;
 }
