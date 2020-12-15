@@ -6,6 +6,7 @@ def initials(s):
     out = '';
     s = s.split( ' ' );
     l = len(s);
+    print(s,l);
     for i in range( l ):
         tmp = chr(ord(s[i][0]) - 32 );
         out = out + tmp;

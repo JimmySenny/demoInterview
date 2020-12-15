@@ -9,10 +9,13 @@ class Solution:
         if( nl == nr ):
             return True;
         return False;
+
+
     def isPalindrome1(self, x):
         if( x < 0 ):
             return False;
         
+        # 100021无法通过测试集
         while( x >=10):
             div = 1;
             while(x // div >= 10 ):

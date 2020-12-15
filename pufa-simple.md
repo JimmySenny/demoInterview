@@ -495,6 +495,8 @@
 **进阶:**
 你可以迭代或递归地反转链表。你能否用两种方法解决这道题？
 
+![img](assets/9ce26a709147ad9ce6152d604efc1cc19a33dc5d467ed2aae5bc68463fdd2888.gif)
+
 #### [剑指 Offer用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
 难度简单147收藏分享切换为英文接收动态反馈

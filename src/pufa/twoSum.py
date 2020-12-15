@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 
 class Solution:
 #    def twoSum(self, nums: List[int], target: int) -> List[int]:
