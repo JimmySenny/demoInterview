@@ -2,36 +2,44 @@
 
 class Solution:
 #    def permute(self, nums: List[int]) -> List[List[int]]:
-    def dfs(self,nums,lens,depth,path,used,res):
-        if depth == lens:
-            res.append(path[:])
+    def backtrack( self, nums, path, check, res ):
+        print("path", path, check)
+        if len(nums) == len(path):
+            res.append(path.copy())
+            print("res", res)
+            path = []
             return
+
         i = 0
-        while i < lens:
-            if not used[i]:
-                used[i] = True
-                path.append(nums[i])
-
-                self.dfs(nums,lens,depth+1,path,used,res)
-
-                used[i] = False;
-                path.pop()
+        while i < len(nums):
+            if check[i]:
+                i += 1
+                continue;
+            check[i] = True
+            path.append(nums[i])
+            print("i", i, "path", path, check)
+            self.backtrack(nums, path, check,res)
+            check[i] = False;
+            path.pop()
+            i += 1;
 
     def permute(self, nums):
-        lens = len(nums)
-        if lens == 0:
+        if len(nums) == 0:
             return [];
 
-        used = [False for _ in range(lens)]
+        check = [False for _ in range(len(nums))]
+        print(check)
         res = []
-        self.dfs(nums,lens,0,[],used,res)
+
+        self.backtrack(nums, [], check, res )
+
         return res;
         
 
-
 def main():
+    nums = [1,2,3]
     s = Solution();
-    print(s.permute([1,2,3,4]))
+    print(s.permute(nums))
 
 if __name__ == '__main__':
     main()
