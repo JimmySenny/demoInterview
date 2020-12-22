@@ -13,6 +13,7 @@ class Solution:
             for i in range(coin,n+1):
                 dp[i] = dp[i] + dp[i-coin]
                 print("i:",i,dp)
+            print("i:",i,dp[n])
 
         print(dp[n], dp[n]%1000000007);
         return dp[n]%1000000007

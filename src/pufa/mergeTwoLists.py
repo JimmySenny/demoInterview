@@ -21,7 +21,7 @@ class Solution:
             prev = prev.next;
 
         prev.next = l1 if l1 is not None else l2;
-        return mhead;
+        return mhead.next;
 
 def main():
     s = Solution();
@@ -50,7 +50,7 @@ def main():
     m = ListNode(0);
     m = s.mergeTwoLists(l1,l2);
     while m:
-        print(m.val);
+        #print(m.val, end=',');
         m = m.next;
 
 if __name__ == '__main__':
