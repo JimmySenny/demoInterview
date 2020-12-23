@@ -23,7 +23,7 @@ class Solution:
         left = 1
         right = (x + 1)//2
         while left < right:
-            midright = (left + right + 1)//2
+            midright = (left + right + 1)//2    #右中位数
             print( "[",x, left, right, midright, "]" );
             guess = midright * midright;
             if( guess > x ):

@@ -18,7 +18,7 @@ class Solution:
             if A[j]%2 == 1:
                 j -= 1;
         return A
-    #按照2的模排序
+    #按照2的模排序 冒泡
     def sortArrayByParity1(self, A):
         i, j = 0, 0;
         while i < len(A) - 1:
@@ -33,12 +33,30 @@ class Solution:
                 break
             i += 1
         return A;            
+    def sortArrayByParity2(self, A):
+        #按照2的模排序 选择
+        i,j,index = 0,0,0
+        while i < len(A) - 1:
+            index = i
+            j = i + 1
+            while j < len(A):
+                if(A[j]%2 > A[index]%2):
+                    index = j
+                j += 1
+            if index != j:
+                tmp = A[i]
+                A[i] = A[index]
+                A[index] = tmp
+
+            i += 1
+        return A
 
 def main():
     s = Solution();
     a = [3,1,2,4];
-    print(s.sortArrayByParity1(a))
-    print(s.sortArrayByParity1([2,6,3,5]))
+    print(s.sortArrayByParity2(a))
+    print(s.sortArrayByParity2([2,6,3,5]))
+    print(s.sortArrayByParity2([2,6,3,5,6]))
 
 if __name__ == '__main__':
     main();
